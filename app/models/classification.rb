@@ -8,13 +8,13 @@ class Classification < ActiveRecord::Base
   end 
   
   def self.longest
-    lonest = Boat.first.length 
-    Boat.all.each do |b|
-      if b.length > longest
-        longest = b.length 
-      end 
-    end 
-    self.includes(:boats).where(["boats.length IS ?", longest]).group("classifications.id")
+   # lonest = Boat.first.length 
+    #Boat.all.each do |b|
+     # if b.length > longest
+      #  longest = b.length 
+     # end 
+    #end 
+   # self.includes(:boats).where(["boats.length IS ?", longest]).group("classifications.id")
   end 
   
   
