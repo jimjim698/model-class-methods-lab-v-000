@@ -8,7 +8,7 @@ class Classification < ActiveRecord::Base
   end 
   
   def self.longest
-    lonest = Boat.first.length 
+    longest = 0
     Boat.all.each do |b|
       if b.length > longest
         longest = b.length 
